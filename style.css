@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(balls);
+    /* background-color: brown; */
+    background-size: cover;
+    /* background-position: center;
+    background-repeat: no-repeat; */
+}
+ 
+h1 {
+    color: rgb(12, 1, 1);
+}
+ 
+h2, p, #attempts-left {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 24px;
+}
+ 
+ 
+#start-screen, #game-container {
+    text-align: center;
+}
+ 
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(10, 50px);
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+ 
+button {
+    padding: 10px 20px;
+    background-color: #021549;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+ 
+button:hover {
+    background-color: #035707;
+}
+ 
+.ball {
+    width: 55px;
+    height: 55px;
+    background-color: rgb(3, 20, 17);
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 22px;
+    
+}
+
+.ball:hover {
+    animation: bounce 0.5s ease;
+    animation-name: bounce;
+    animation-duration: 0.3s;
+    /* animation-iteration-count: infinite; */
+    animation-timing-function: ease;
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(5px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY();
+    }
+  }
+
+ 
+.ball.yellow {
+    background-color: yellow;
+}
+ 
+.ball.red {
+    background-color: red;
+}
+ 
+.ball.green {
+    background-color: green;
+}
+ 
+#game-message {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
